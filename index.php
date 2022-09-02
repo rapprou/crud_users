@@ -9,52 +9,59 @@ include 'models/connect.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
+    <script src="js/candy.js"></script>
     <script src="https://kit.fontawesome.com/7aafcc8abf.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Gestion etudiant Beweb</title>
+    <title>Gestion blog Candycraft</title>
 </head>
 
 <body>
-    <script>
+    <!-- <script>
         function suppr() {
             var response = confirm("vous etes sure d'effacer ce post");
             return response
         }
-    </script>
-    <h1 class="text-center p-4">Gestion Admin Utilisateurs du BLOG CandyCraft</h1>
+    </script> -->
+    <h1 class="text-center p-1">Inscription étudiant</h1>
     <?php
     include 'controller/Supprimer_Controller.php';
     ?>
-    <div class="container-fluid row">
-        <form class="col-3 p-3" method="post">
-            <h3 class="text-center text-secondary">Inscription Author</h3>
+
+
+
+    <div class="container" align="center">
+        <form class="col col-4 p-3" method="post">
+            <h3 class="text-center text-secondary">Fiche étudiant</h3>
             <?php
             include 'controller/User_Controller.php';
             ?>
-            <div class="mb-3">
+            <div class="mb-1">
                 <label for="exampleInputEmail1" class="form-label">Nom</label>
                 <input type="text" class="form-control" name="nom">
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label for="exampleInputEmail1" class="form-label">Prenom</label>
                 <input type="text" class="form-control" name="prenom">
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label for="exampleInputEmail1" class="form-label">Numero Téléphone</label>
                 <input type="tel" class="form-control" name="tel">
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label for="exampleInputEmail1" class="form-label">Date de naissance</label>
                 <input type="date" class="form-control" name="date_nac">
             </div>
-            <div class="mb-4">
+            <div class="mb-1">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
                 <input type="email" class="form-control" name="email">
             </div>
 
             <button type="submit" class="btn btn-primary" name="btnregister" value="ok">S'inscrire</button>
         </form>
-        <div class="col-9 p-4">
+    </div>
+
+    <div class="container">
+        <div class="col p-3">
             <table class="table">
                 <thead class="bg-info">
                     <tr>
@@ -69,8 +76,7 @@ include 'models/connect.php';
                 </thead>
                 <tbody>
                     <?php
-                    //include 'models/connect.php';
-                    $sql = $bdd->query('select * from users');
+                    $sql = $bdd->query('SELECT * FROM users ORDER BY `id` DESC');
                     while ($data = $sql->fetchObject()) { ?>
                         <tr>
                             <td><?= $data->id ?></td>
@@ -93,11 +99,10 @@ include 'models/connect.php';
 
         </div>
 
-    </div>
-
 
 
 </body>
+<script src="js/candy.js"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 

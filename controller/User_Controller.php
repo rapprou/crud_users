@@ -17,7 +17,7 @@ if (!empty($_POST["btnregister"])) {
         $date_nac = $_POST['date_nac'];
         $email = $_POST['email'];
 
-        $sql = $bdd->query("insert into users(nom, prenom, tel, date_nac, email) values('$nom', '$prenom', '$tel', '$date_nac', '$email')");
+        $sql = $bdd->query("INSERT INTO users (nom, prenom, tel, date_nac, email) VALUES('$nom', '$prenom', '$tel', '$date_nac', '$email')");
         if ($sql == 1) {
             echo '<div class="alert alert-success">Persona registrada correctamente</div>';
         } else {

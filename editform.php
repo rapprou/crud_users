@@ -1,5 +1,6 @@
 <?php
 include 'models/connect.php';
+
 $id = $_GET["id"];
 $sql = $bdd->query("select * from users where id = $id ");
 ?>
@@ -47,7 +48,7 @@ $sql = $bdd->query("select * from users where id = $id ");
             </div>
 
             <button type="submit" class="btn btn-primary" name="btnedit" value="ok">Modifier</button>
-            <a href="index.php">Go to dashboard</a>
+            <a href="index.php"><i class="fa-solid fa-arrow-right"> aller au tableau de bord</i></a>
         </form>
 
     <?php }
