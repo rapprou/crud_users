@@ -8,4 +8,3 @@ Fiche inscription
 - MYSQL
 - HTML
 - CSS
-- BOOTSTRAP 5.1
