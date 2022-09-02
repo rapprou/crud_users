@@ -1,6 +1,6 @@
 ## Inscriptionfiche étudiant CRUD
 
-![alt text](https://github.com/rapprou/crud_users/blob/main/img/etudiant.jpeg) 
+![alt text](https://github.com/rapprou/crud_users/blob/master/img/etudiant.jpeg) 
 
 Fiche inscription
 
