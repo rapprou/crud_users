@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/rapprou/crud_users/blob/master/img/etudiant.jpeg) 
 
-Fiche inscription
+Fiche inscription:
 
 - PHP
 - MYSQL
